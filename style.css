@@ -13,6 +13,18 @@ body {
     font-size: 16px;
 }
 
+body.darkMode {
+    --backgroundColor: #121212;
+    --textColor: #FFFFFF;
+    --primaryColor: #8b3fe9;
+    --secondaryColor: #024942;
+    --linksColor: #1E90FF;
+}
+
+body.darkMode a {
+    color: var(--linksColor);
+}
+
 header {
     background-color: var(--secondaryColor);
     padding: 20px;
