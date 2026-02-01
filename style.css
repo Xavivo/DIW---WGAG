@@ -1,3 +1,57 @@
+:root {
+    --backgroundColor: #254F22;
+    --textColor: #000000;
+    --primaryColor: #A03A13;
+    --secondaryColor: #F5824A;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 16px;
+}
+
+header {
+    background-color: var(--secondaryColor);
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: var(--primaryColor);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+section {
+    padding: 40px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--secondaryColor);
+    border-top: 1px solid black;
+    font-size: 0.9rem;
+}
+
+#scrollUp {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
 li {
     list-style-type: none
 }
