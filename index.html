@@ -9,34 +9,49 @@
 </head>
 
 <body>
+    <div id="progressContainer">
+        <div id="progressBar"></div>
+    </div>
     <header>
-        <h1>Bienvenida al usuario</h1>
+        <h1 id="welcome">Bienvenida al usuario</h1>
         <nav>
             <ul id="NavegationMenu">
                 <li>
-                    <a href="#">Enlace1</a>
+                    <a href="#colors">Enlace a sección de colores</a>
                 </li>
                 <li>
-                    <a href="#">Enlace2</a>
+                    <a href="#counter">Enlace a sección del contador</a>
                 </li>
                 <li>
-                    <a href="#">Enlace3</a>
+                    <a href="#bodySection">Enlace a sección del cuerpo de la página</a>
                 </li>
             </ul>
         </nav>
-        <button>Aumentar texto</button><button id="themeChange">Cambiar tema</button><button>Disminuir texto</button>
+        <div>
+            <button id="increaseText">Aumentar texto</button><button id="themeChange">Cambiar tema</button><button id="decreaseText">Disminuir texto</button>
+        </div>
     </header>
 
     <main>
-        <section>
+        <section id="colors">
             <p>Texto que cambiará de color su fondo</p>
-            <button>Cambia el color del fondo!</button>
+            <button id="colorButton">Cambia el color del fondo!</button>
         </section>
-        <section>
-            <p>Contador de cliks: <span id="counter">0</span></p>
+        <section id="counter">
+            <p>Contador de cliks: <span id="clicksCounter">0</span></p>
             <button id="botonCounter">Haz click para aumentar!</button>
         </section>
-        <button id="scrollUp">Regresar al inicio de la página</button>
+        <section id="bodySection">
+            <h2>Cuerpo de la página</h2>
+            <p>Esta parte ha sido introducida para que la página sea lo suficientementelarga y se pueda notar la barra de progreso y el botón de volver arriba.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+            <br><br><br><br><br>
+            <p>Sigue bajando.....</p>
+            <br><br><br><br><br>
+            <p>Final del cuerpo de la página</p>
+            <br><br><br>
+        </section>
+        <button id="scrollUp" title="arriba">Arriba!</button>
     </main>
     <footer>
         <p>2026 WGAG - albertovazquezmonge@alumnos.alborfp.com</p>
