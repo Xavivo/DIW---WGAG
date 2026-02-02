@@ -90,4 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrolled = (scrollTop / scrollHeight) * 100;
         progressBar.style.width = scrolled + '%';
     });
+
+    // Leer página
+    const readButton = document.getElementById('readPage');
+    
+    readButton.addEventListener('click', () => {
+        const textContent = document.body.innerText;
+        const utterance = new SpeechSynthesisUtterance(textContent);
+        utterance.lang = 'es-ES'; // Español
+        window.speechSynthesis.speak(utterance);
+    });
 });
