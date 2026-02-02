@@ -107,3 +107,23 @@ nav ul {
     width: 0%; /* Empieza en 0, Javascript lo modifica */
     transition: width 0.2s ease-out;
 }
+
+#clicksCounter {
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#counter {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#colors {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}

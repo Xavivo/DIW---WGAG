@@ -50,4 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
             body.style.fontSize = currentSize + 'px';
         }
     });
+
+    // Contador de clicks
+    const countBtn = document.getElementById('botonCounter');
+    const displayCount = document.getElementById('clicksCounter');
+    let count = 0;
+
+    countBtn.addEventListener('click', () => {
+        count++;
+        displayCount.innerText = count;
+    });
 });
