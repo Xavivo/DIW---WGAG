@@ -31,4 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'light');
         }
     });
+
+    // Aumentar/Disminuir tamaño del texto
+    const increaseBtn = document.getElementById('increaseText');
+    const decreaseBtn = document.getElementById('decreaseText');
+    let currentSize = 16; // Tamaño base definido en el CSS
+
+    increaseBtn.addEventListener('click', () => {
+        if(currentSize < 24) {
+            currentSize += 2;
+            body.style.fontSize = currentSize + 'px';
+        }
+    });
+
+    decreaseBtn.addEventListener('click', () => {
+        if (currentSize > 12) {
+            currentSize -= 2;
+            body.style.fontSize = currentSize + 'px';
+        }
+    });
 });
