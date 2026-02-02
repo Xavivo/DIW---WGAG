@@ -12,7 +12,7 @@ body {
     color: var(--textColor);
     font-family: Arial, sans-serif;
     margin: 0;
-    font-size: 16px; /* Cambia con js */
+    font-size: 20px; /* Cambia con js */
     transition: background-color 0.5s ease, color 0.5s ease; 
 }
 
