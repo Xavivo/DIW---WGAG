@@ -60,4 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
         count++;
         displayCount.innerText = count;
     });
+
+    // Cambiar color de fondo aleatoriamente
+    const colorSection = document.getElementById('colors');
+    const colorBtn = document.getElementById('colorButton');
+
+    colorBtn.addEventListener('click', () => {
+        // Genera un color hexadecimal aleatorio
+        const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        colorSection.style.backgroundColor = randomColor;
+        const colorCodeSpan = document.getElementById('colorCode');
+        colorCodeSpan.innerText = randomColor;
+    });
 });

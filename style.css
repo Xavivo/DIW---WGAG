@@ -127,3 +127,7 @@ nav ul {
     justify-content: center;
     gap: 50px;
 }
+
+#colorCode {
+    font-weight: bold;
+}
