@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const greetingElement = document.getElementById('welcome');
     const hour = new Date().getHours();
     let greetingText = 'Bienvenido';
-    
+
     if (hour < 12) greetingText = 'Buenos días';
     else if (hour < 20) greetingText = 'Buenas tardes';
     else greetingText = 'Buenas noches';
-    
+
     greetingElement.innerText = `${greetingText} Salva ┗(^o^)┓三`;
 
     // Modo oscuro
@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
 
     const savedTheme = localStorage.getItem('theme');
-    
+
     if (savedTheme === 'dark') {
         body.classList.add('darkMode');
     }
-    
+
     buttonTheme.addEventListener('click', () => {
         body.classList.toggle('darkMode');
-        
+
         if (body.classList.contains('darkMode')) {
             localStorage.setItem('theme', 'dark');
         } else {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSize = 16; // Tamaño base definido en el CSS
 
     increaseBtn.addEventListener('click', () => {
-        if(currentSize < 24) {
+        if (currentSize < 24) {
             currentSize += 2;
             body.style.fontSize = currentSize + 'px';
         }
@@ -67,9 +67,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     colorBtn.addEventListener('click', () => {
         // Genera un color hexadecimal aleatorio
-        const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
         colorSection.style.backgroundColor = randomColor;
         const colorCodeSpan = document.getElementById('colorCode');
         colorCodeSpan.innerText = randomColor;
+    });
+
+    // Acción del botón de ir arriba
+    const scrollButton = document.getElementById('scrollUp');
+    scrollButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Barra de progreso
+    const progressBar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (scrollTop / scrollHeight) * 100;
+        progressBar.style.width = scrolled + '%';
     });
 });
